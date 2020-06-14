@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dateFormater" class="java.text.SimpleDateFormat">
+		<constructor-arg value="dd-MM-yyyy" />
+	</bean>
+
+	<bean id="ironman" class="com.cognizant.moviecruiser.model.Movie">
+		<property name="id" value="1" />
+		<property name="title" value="Iron Man" />
+		<property name="boxOffice" value="200M" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch">
+			<bean factory-bean="dateFormater" factory-method="parse">
+				<constructor-arg value="4-04-2008" />
+			</bean>
+		</property>
+		<property name="genre" value="SciFi" />
+		<property name="hasTeaser" value="true" />
+	</bean>
+	<bean id="thor" class="com.cognizant.moviecruiser.model.Movie">
+		<property name="id" value="2" />
+		<property name="title" value="Thor" />
+		<property name="boxOffice" value="100M" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch">
+			<bean factory-bean="dateFormater" factory-method="parse">
+				<constructor-arg value="4-04-2010" />
+			</bean>
+		</property>
+		<property name="genre" value="Action" />
+		<property name="hasTeaser" value="true" />
+	</bean>
+	<bean id="avengers" class="com.cognizant.moviecruiser.model.Movie">
+		<property name="id" value="3" />
+		<property name="title" value="Avengers" />
+		<property name="boxOffice" value="100B" />
+		<property name="active" value="true" />
+		<property name="dateOfLaunch">
+			<bean factory-bean="dateFormater" factory-method="parse">
+				<constructor-arg value="4-04-2012" />
+			</bean>
+		</property>
+		<property name="genre" value="SciFi" />
+		<property name="hasTeaser" value="true" />
+	</bean>
+
+	<bean id="movielist" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="ironman" />
+				<ref bean="thor" />
+				<ref bean="avengers" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>

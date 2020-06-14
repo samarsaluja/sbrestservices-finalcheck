@@ -1,0 +1,13 @@
+com\cognizant\moviecruiser\dao\FavouritesDaoCollectionImpl.class
+com\cognizant\moviecruiser\service\exception\FavoritesEmptyException.class
+com\cognizant\moviecruiser\service\MovieService.class
+com\cognizant\moviecruiser\controller\FavouritesController.class
+com\cognizant\moviecruiser\service\exception\MovieNotFoundException.class
+com\cognizant\moviecruiser\MoviecruiserApplication.class
+com\cognizant\moviecruiser\dao\FavouriteDao.class
+com\cognizant\moviecruiser\model\Favourite.class
+com\cognizant\moviecruiser\dao\MoviesDao.class
+com\cognizant\moviecruiser\dao\MoviesDaoCollectionImpl.class
+com\cognizant\moviecruiser\controller\MovieController.class
+com\cognizant\moviecruiser\model\Movie.class
+com\cognizant\moviecruiser\service\FavouriteService.class
